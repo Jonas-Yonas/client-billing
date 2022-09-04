@@ -1,0 +1,67 @@
+.toast-wrapper {
+  display: flex;
+  position: fixed;
+  max-width: 300px;
+  width: 18%;
+  padding: 12px;
+  margin: 0px 12px 24px 12px;
+
+  background: var(--box-color);
+  border-radius: 4px;
+
+  align-items: center;
+  gap: 12px;
+  bottom: 0;
+  animation: fadeIn 3s;
+}
+
+.toast-wrapper > svg {
+  width: 30px;
+  height: 30px;
+}
+
+.toast-wrapper > div > span {
+  color: var(--dark-color);
+}
+
+.hide-toast {
+  display: none;
+}
+
+.fade {
+  animation: fadeOut 3s;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* large devices */
+@media screen and (max-width: 992px) {
+  .toast-wrapper {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* medium devices */
+@media screen and (max-width: 640px) {
+  .toast-wrapper {
+    display: none;
+  }
+}

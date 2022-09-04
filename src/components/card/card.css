@@ -1,0 +1,193 @@
+.content {
+  margin: auto;
+  max-width: 92%;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+
+  width: 10.98vw;
+  height: 10.98vw;
+
+  border-radius: 50%;
+  background: #eaf1fe;
+}
+
+.confirm-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  gap: 10px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.confirm-text > div > svg {
+  margin: auto;
+}
+
+.btn-back {
+  display: flex;
+}
+
+.btn-back > button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.btn-back > button > :nth-child(1) {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #ededed;
+  border-radius: 4px;
+  padding: 6px;
+  background: var(--white-color);
+}
+
+.btn-back > button > span {
+  color: var(--dark-color);
+}
+
+.deal-box {
+  width: auto;
+  max-width: 70%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: var(--white-color);
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.p {
+  padding: 10px 15px;
+}
+
+.deal-box > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.deal-box > h2 {
+  font-weight: var(--font-700);
+  font-size: var(--h4-font-size);
+}
+
+.deal-box > div > select {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+
+.deal-box > div > select {
+  display: flex;
+  gap: 10px;
+}
+
+.deal-box > div > select > option {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border: none;
+  outline: none;
+}
+
+.deal-box > div > :nth-child(1) {
+  text-align: left;
+}
+
+.deal-box > div > :nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+}
+
+.deal-box > div > :nth-child(2) > :nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--success-color);
+  color: var(--white-color);
+}
+
+.checkbox {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ------------- breakpoints ---------------- */
+/* medium devices */
+@media screen and (max-width: 768px) {
+  .deal-box {
+    max-width: 100%;
+  }
+
+  .confirm-text {
+    margin-top: 0px;
+    gap: 8px;
+  }
+
+  .deal-box,
+  .deal-box > div {
+    flex-direction: column;
+  }
+
+  .deal-box > div > :nth-child(1) {
+    text-align: center;
+  }
+
+  .checkbox {
+    min-width: 16px;
+    width: auto;
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+
+  @media screen and (max-width: 512px) {
+    .deal-box > h2 {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+/* small devices */
+@media screen and (max-width: 376px) {
+  .deal-box > h2 {
+    display: flex;
+  }
+
+  @media screen and (max-width: 350px) {
+    .deal-box {
+      background: var(--secondary-color);
+      max-width: 100%;
+    }
+
+    .deal-box > h2 {
+      font-size: var(--small-font-size);
+    }
+  }
+}

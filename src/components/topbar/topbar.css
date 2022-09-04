@@ -1,0 +1,95 @@
+.loading-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+}
+
+.loading-wrapper > div {
+  gap: 16px;
+}
+
+.loading-wrapper > div > * {
+  cursor: pointer;
+}
+
+.loading-wrapper > :nth-child(2) > h4 {
+  color: #000;
+}
+
+.loading-wrapper > :nth-child(2) {
+  background: var(--box-color);
+  border-radius: 4px;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+
+.loading-wrapper > :nth-child(1) > :nth-child(1) {
+  padding-right: 16px;
+  border-right: 1px solid var(--box-color);
+}
+
+.loading-wrapper > :nth-child(1),
+.loading-wrapper > :nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+.loading-wrapper > :nth-child(1) > :not(:first-child),
+.loading-wrapper > :nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ------------- breakpoints ---------------- */
+/* medium devices */
+@media screen and (max-width: 768px) {
+  .loading-wrapper {
+    display: block;
+    padding-bottom: 24px;
+  }
+
+  .loading-wrapper > :nth-child(2) {
+    display: inline-flex;
+    float: right;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .loading-wrapper {
+    display: flex;
+    flex-direction: inherit;
+  }
+
+  .loading-wrapper > :nth-child(1) {
+    display: block;
+    flex-direction: column;
+  }
+
+  .loading-wrapper > :nth-child(1) > :nth-child(even) {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .loading-wrapper > :nth-child(2) {
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .loading-wrapper {
+    padding: 0px;
+  }
+}
+
+/* small devices */
+@media screen and (max-width: 414px) {
+  .loading-wrapper > :nth-child(1) {
+    display: block;
+  }
+
+  .loading-wrapper > :nth-child(1) > :nth-child(3) {
+    width: max-content;
+  }
+}

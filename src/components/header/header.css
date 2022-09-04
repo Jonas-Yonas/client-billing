@@ -1,0 +1,77 @@
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--box-color);
+}
+
+.left-header-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-header-section > :nth-child(1) {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.left-header-section > :nth-child(2) {
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--dark-color);
+}
+
+.right-header-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.right-header-section > :nth-child(1) {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* ------------- breakpoints ---------------- */
+/* medium devices */
+@media screen and (max-width: 768px) {
+  .header-wrapper {
+    display: grid;
+    padding: 16px;
+    justify-content: inherit;
+  }
+
+  .left-header-section {
+    display: contents;
+  }
+
+  .right-header-section {
+    justify-content: flex-end;
+  }
+}
+
+/* small devices */
+@media screen and (max-width: 512px) {
+  .header-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 24px 0px;
+    gap: 10px;
+  }
+
+  .left-header-section {
+    flex-wrap: inherit;
+    gap: 8px;
+  }
+
+  .left-header-section > :nth-child(2) {
+    text-align: center;
+  }
+}
